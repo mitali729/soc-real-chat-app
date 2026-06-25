@@ -1,0 +1,286 @@
+/* Removing default spacing */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* Body */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #42b7e1;
+}
+
+
+/* Main two column layout */
+
+.main-container {
+    display: flex;
+    height: 100vh;
+}
+
+
+/* Left sidebar */
+
+.sidebar {
+    width: 350px;
+    background-color: white;
+    border-right: 1px solid #cccccc;
+}
+
+
+/* Logo area */
+
+.logo {
+    height: 70px;
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #eeeeee;
+}
+
+
+.logo-image {
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+    margin-right: 10px;
+}
+
+
+/* Search bar */
+
+.search {
+    padding: 12px;
+}
+
+
+.search input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    outline: none;
+    border-radius: 8px;
+    background-color: #eeeeee;
+}
+
+
+/* Contact cards */
+
+.contacts {
+    overflow-y: auto;
+}
+
+
+.contact {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    border-bottom: 1px solid #eeeeee;
+    cursor: pointer;
+}
+
+
+.contact:hover {
+    background-color: #eeeeee;
+}
+
+
+.contact.active {
+    background-color: #dddddd;
+}
+
+
+/* Profile circle */
+
+.profile {
+    width: 45px;
+    height: 45px;
+    background-color: #4d8fce;
+    color: white;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-weight: bold;
+}
+
+
+/* Contact text */
+
+.contact-info {
+    flex: 1;
+    margin-left: 12px;
+}
+
+
+.contact-info h3 {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+
+.contact-info p {
+    font-size: 13px;
+    color: gray;
+}
+
+
+.contact span {
+    font-size: 11px;
+    color: gray;
+}
+
+
+/* Right chat area */
+
+.chat-area {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    background-color: #42b7e1;
+}
+
+
+/* Chat header */
+
+.chat-header {
+    height: 70px;
+    background-color: #eeeeee;
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+
+.user-name {
+    flex: 1;
+    margin-left: 12px;
+}
+
+
+.user-name h3 {
+    font-size: 16px;
+}
+
+
+.user-name p {
+    font-size: 12px;
+    color: green;
+    margin-top: 3px;
+}
+
+
+.menu {
+    font-size: 25px;
+    cursor: pointer;
+}
+
+
+/* Messages area */
+
+.messages {
+    flex: 1;
+    padding: 25px;
+    overflow-y: auto;
+}
+
+
+/* Received message */
+
+.received-message {
+    width: fit-content;
+    max-width: 60%;
+    background-color: white;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+
+/* Sent message */
+
+.sent-message {
+    width: fit-content;
+    max-width: 60%;
+    background-color: #d9fdd3;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    margin-left: auto;
+}
+
+
+/* Message time */
+
+.received-message span,
+.sent-message span {
+    display: block;
+    font-size: 10px;
+    color: gray;
+    text-align: right;
+    margin-top: 5px;
+}
+
+
+/* Bottom input area */
+
+.message-box {
+    display: flex;
+    padding: 12px;
+    background-color: #eeeeee;
+}
+
+
+.message-box input {
+    flex: 1;
+    padding: 12px;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+}
+
+
+.message-box button {
+    padding: 10px 18px;
+    margin-left: 10px;
+    border: none;
+    border-radius: 20px;
+    background-color: #00a884;
+    color: white;
+    cursor: pointer;
+}
+
+
+.message-box button:hover {
+    background-color: #008f72;
+}
+
+
+/* Mobile responsive design */
+
+@media screen and (max-width: 768px) {
+
+    .sidebar {
+        display: none;
+    }
+
+    .chat-area {
+        width: 100%;
+    }
+
+    .messages {
+        padding: 15px;
+    }
+
+    .sent-message,
+    .received-message {
+        max-width: 80%;
+    }
+
+}
